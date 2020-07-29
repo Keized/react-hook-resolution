@@ -1,19 +1,15 @@
-import React from 'react';
-import { useResolution } from 'react-hook-resolution';
+import React, { useState } from 'react';
+import Header from './Header';
+import DeviceAnimation from './DeviceAnimation';
+import Form from './Form';
 
 const App = () => {
-  const resolution = useResolution();
+  const [breakpoints, setBreakpoints] = useState({desktop: 992, tablet: 768, mobile: 0 });
 
   return <div>
-    <h1>React hook resolution</h1>
-    <h2><a href="https://github.com/Keized/react-hook-resolution">Github</a></h2>
-    <div id="device-container">
-      <h3>You're on {resolution.desktop ? 'desktop / laptop' : resolution.tablet ? 'tablet (or baby laptop)' : 'mobile'} !</h3>
-      <div id="device" className={resolution.desktop ? 'desktop' : resolution.tablet ? 'tablet' : 'mobile'}>
-        <div className="keyboard" />
-      </div>
-      <p>Try to resize your page</p>
-    </div>
+    <Header/>
+    <DeviceAnimation breakpoints={breakpoints}/>
+    <Form breakpoints={breakpoints} setBreakpoints={setBreakpoints} />
   </div>
 }
 

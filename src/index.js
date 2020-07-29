@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect, useEffect } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
 const initialState = { mobile: false, tablet: false, desktop: true };
@@ -14,11 +14,16 @@ export const useResolution = (
         const currentResolution = { ...initialState };
         currentResolution.mobile = width < breakpoints.tablet;
         currentResolution.desktop = width >= breakpoints.desktop;
-        currentResolution.tablet = width < breakpoints.desktop && width > breakpoints.tablet;
+        currentResolution.tablet =
+            width < breakpoints.desktop && width > breakpoints.tablet;
         setResolution(currentResolution);
     };
 
     const [sizeHandler] = useDebouncedCallback(updateSize, debounceDelay);
+
+    useEffect(() => {
+        updateSize();
+    }, [breakpoints]);
 
     useLayoutEffect(() => {
         updateSize();

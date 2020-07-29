@@ -159,3 +159,28 @@ a {
   25% { transform: scale(1.1, 0.9); }
   50% { transform: scale(0.9, 1.1); }
 }
+
+form {
+  margin: auto;
+  display: flex;
+  width: 60%;
+}
+
+form input {
+  margin-top: .5rem;
+  border: none;
+  border-bottom: 3px solid var(--primary);
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+form input:focus {
+  outline: none;
+}
+
+.form-group {
+  padding: .5rem;
+  flex: 1;
+}
