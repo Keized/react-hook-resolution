@@ -4,7 +4,7 @@
   "description": "Get the screen resolution of your page with a simple react hook",
   "author": "Keized",
   "license": "MIT",
-  "repository": "Keized/react-hook-resolution",
+  "repository": "https://github.com/Keized/react-hook-resolution",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
