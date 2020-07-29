@@ -1,6 +1,6 @@
 # react-hook-resolution
 
-> Get the screen resolution of your app with a simply react hook
+> Get the screen resolution of your app with a simple react hook
 
 [![NPM](https://img.shields.io/npm/v/react-hook-resolution.svg)](https://www.npmjs.com/package/react-hook-resolution) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -13,14 +13,17 @@ npm install --save react-hook-resolution
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import MyComponent from 'react-hook-resolution'
-import 'react-hook-resolution/dist/index.css'
+import { useResolution } from 'react-hook-resolution';
 
 class Example extends Component {
+  const resolution = useResolution();
+
   render() {
-    return <MyComponent />
+    return <div>
+        {resolution.mobile && 'I am on mobile !'}
+    </div>
   }
 }
 ```
