@@ -12,6 +12,8 @@ npm install --save react-hook-resolution
 
 ## Usage
 
+**See this [example](https://keized.github.io/react-hook-resolution/) for live demo**
+
 ```jsx
 import React, { Component } from 'react';
 
