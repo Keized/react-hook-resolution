@@ -14,6 +14,7 @@ npm install --save react-hook-resolution
 
 **See this [example](https://keized.github.io/react-hook-resolution/) for live demo**
 
+
 ```jsx
 import React, { Component } from 'react';
 
@@ -28,7 +29,29 @@ class Example extends Component {
     </div>
   }
 }
-```
+``` 
+
+Pass config to override the default breakpoints
+
+```jsx
+import React, { Component } from 'react';
+
+import { useResolution } from 'react-hook-resolution';
+
+class Example extends Component {
+  const resolution = useResolution({
+                                           desktop: 1200,
+                                           tablet: 900,
+                                           mobile: 0
+                                       });
+
+  render() {
+    return <div>
+        {resolution.mobile && 'I am on mobile !'}
+    </div>
+  }
+}
+``` 
 
 ## License
 

@@ -1,6 +1,6 @@
 {
   "name": "react-hook-resolution",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get the screen resolution of your page with a simple react hook",
   "author": "Keized",
   "license": "MIT",
