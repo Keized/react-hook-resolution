@@ -1,7 +1,7 @@
 {
   "name": "react-hook-resolution-example",
   "homepage": ".",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
@@ -12,14 +12,8 @@
   "dependencies": {
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
-    "react-scripts": "file:../node_modules/react-scripts",
-    "react-hook-resolution": "file:.."
-  },
-  "devDependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "react-hook-resolution": "file:..",
+    "react-scripts": "file:../node_modules/react-scripts"
   },
   "browserslist": [
     ">0.2%",

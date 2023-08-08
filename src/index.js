@@ -14,12 +14,11 @@ export const useResolution = (
         const currentResolution = { ...initialState };
         currentResolution.mobile = width < breakpoints.tablet;
         currentResolution.desktop = width >= breakpoints.desktop;
-        currentResolution.tablet =
-            width < breakpoints.desktop && width > breakpoints.tablet;
+        currentResolution.tablet = width < breakpoints.desktop && width > breakpoints.tablet;
         setResolution(currentResolution);
     };
 
-    const [sizeHandler] = useDebouncedCallback(updateSize, debounceDelay);
+    const sizeHandler = useDebouncedCallback(updateSize, debounceDelay);
 
     useEffect(() => {
         updateSize();
