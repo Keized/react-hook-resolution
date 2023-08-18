@@ -1,3 +1,9 @@
+# :no_entry: [DEPRECATED] New repo here : [https://github.com/Keized/react-hook](https://github.com/Keized/react-hook)
+
+
+
+
+
 # react-hook-resolution
 
 > Get the screen resolution of your page with a simple react hook
